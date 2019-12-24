@@ -59,7 +59,35 @@
 	 		$do->delete($_POST['id_writing_experience']);
 			header("location:writing-experience.php");
 	 	}
-	}  elseif ($table == "personal_details") {
+	}  elseif ($table == "working_experience") {
+	 	include $dir . 'working_experience.php';
+		$do = new working_experience();
+
+	 	if ($action == "store") {
+	 		$do->store($_POST['nama_working_experience'], $_POST['posisi'], $_POST['tahun_masuk'], $_POST['tahun_berakhir'], $_POST['upload_file'], $_POST['deskripsi'], $_POST['id_user']);
+	 		header("location:working-internship.php");
+	 	} elseif ($action == "update") {
+	 		$do->update($_POST['id_working_experience'], $_POST['nama_working_experience'], $_POST['posisi'], $_POST['tahun_masuk'], $_POST['tahun_berakhir'], $_POST['upload_file'], $_POST['deskripsi']);
+	 		header("location:working-internship.php");
+	 	} elseif ($action == "delete") {
+	 		$do->delete($_POST['id_working_experience']);
+			header("location:working-internship.php");
+	 	}
+	} elseif ($table == "training_seminar_workshop") {
+	 	include $dir . 'training_seminar_workshop.php';
+		$do = new training_seminar_workshop();
+
+	 	if ($action == "store") {
+	 		$do->store($_POST['nama_kegiatan'], $_POST['posisi'], $_POST['tahun'], $_POST['lokasi'], $_POST['upload_file'], $_POST['kategori'], $_POST['id_user']);
+	 		header("location:training-workshop-seminar.php");
+	 	} elseif ($action == "update") {
+	 		$do->update($_POST['id_training_seminar_workshop'], $_POST['nama_kegiatan'], $_POST['posisi'], $_POST['tahun'], $_POST['lokasi'], $_POST['upload_file'], $_POST['kategori']);
+	 		header("location:training-workshop-seminar.php");
+	 	} elseif ($action == "delete") {
+	 		$do->delete($_POST['id_training_seminar_workshop']);
+			header("location:training-workshop-seminar.php");
+	 	}
+	} elseif ($table == "personal_details") {
 	 	include $dir . 'personal_details.php';
 		$do = new personal_details();
 
