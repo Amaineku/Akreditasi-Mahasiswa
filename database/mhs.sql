@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 16, 2019 at 07:28 PM
+-- Generation Time: Dec 24, 2019 at 03:58 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.10
 
@@ -77,16 +77,25 @@ CREATE TABLE `personal_details` (
   `nim` int(10) NOT NULL,
   `nama` varchar(50) NOT NULL,
   `tempat_lahir` varchar(25) NOT NULL,
-  `tanggal_lahir` date NOT NULL,
-  `no_hp` int(12) NOT NULL,
+  `tanggal_lahir` varchar(10) NOT NULL,
+  `no_hp` int(20) NOT NULL,
   `email` varchar(50) NOT NULL,
   `alamat` varchar(50) NOT NULL,
-  `status_pernikahan` enum('menikah','belum menikah') NOT NULL,
-  `prodi` enum('ilmu komputer','sistem informasi','manajemen bisnis') NOT NULL,
-  `angkatan` enum('4','5','6','7') NOT NULL,
+  `status_pernikahan` varchar(20) NOT NULL,
+  `prodi` varchar(25) NOT NULL,
+  `angkatan` varchar(25) NOT NULL,
   `sosmed` varchar(50) NOT NULL,
   `id_user` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `personal_details`
+--
+
+INSERT INTO `personal_details` (`id_personal_details`, `nim`, `nama`, `tempat_lahir`, `tanggal_lahir`, `no_hp`, `email`, `alamat`, `status_pernikahan`, `prodi`, `angkatan`, `sosmed`, `id_user`) VALUES
+(1, 1710130005, 'Iwan Sinanto Ate', 'Aceh', '01-09-1998', 822131685, 'iwanate01@gmail.com', 'Jeruk Purut No.40', 'Belum Menikah', 'Ilmu Komputer', '5', '@iwanhns', 1),
+(3, 1710130007, 'Aidil Zartesa', 'Bekasi', '2019-12-18', 8221316, 'm.aidil.z@students.esqbs.ac.id', 'Pekanbaru', 'Belum Menikah', 'Ilmu Komputer', '5', '@duldite', 2),
+(4, 1710130010, 'Risnawati', 'Sukabumi', '2019-12-18', 2345678, 'risnawati@students.esqbs.ac.id', 'Sukabumi', 'Belum Menikah', 'Ilmu Komputer', '5', '@Risnawati', 3);
 
 -- --------------------------------------------------------
 
@@ -99,9 +108,16 @@ CREATE TABLE `personal_sertification` (
   `nama_sertification` varchar(50) NOT NULL,
   `nama_lembaga` varchar(50) NOT NULL,
   `upload_file` text NOT NULL,
-  `tahun` longblob NOT NULL,
+  `tahun` varchar(4) NOT NULL,
   `id_user` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `personal_sertification`
+--
+
+INSERT INTO `personal_sertification` (`id_personal_sertification`, `nama_sertification`, `nama_lembaga`, `upload_file`, `tahun`, `id_user`) VALUES
+(1, 'Programmig Mobile', 'MDB PT. ASTRA', 'Surat undangan debat pemira bu asri 080.docx', '2019', 1);
 
 -- --------------------------------------------------------
 
@@ -140,6 +156,13 @@ CREATE TABLE `research_outcome` (
   `id_user` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `research_outcome`
+--
+
+INSERT INTO `research_outcome` (`id_research_outcome`, `nama_research_outcome`, `tahun`, `deskripsi`, `kategori`, `id_user`) VALUES
+(1, 'Penelitian Jadwal Kuliah', '2019', 'Ujian Akhir', 'Programmer', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -152,6 +175,14 @@ CREATE TABLE `skills` (
   `tool_skills` varchar(50) NOT NULL,
   `id_user` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `skills`
+--
+
+INSERT INTO `skills` (`id_skills`, `nama_skills`, `tool_skills`, `id_user`) VALUES
+(1, 'Web Programming', 'Laravel', 1),
+(2, 'Database', 'Mysql', 1);
 
 -- --------------------------------------------------------
 
@@ -336,13 +367,13 @@ ALTER TABLE `leadership_experience`
 -- AUTO_INCREMENT for table `personal_details`
 --
 ALTER TABLE `personal_details`
-  MODIFY `id_personal_details` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_personal_details` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `personal_sertification`
 --
 ALTER TABLE `personal_sertification`
-  MODIFY `id_personal_sertification` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_personal_sertification` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `project_experience`
@@ -354,13 +385,13 @@ ALTER TABLE `project_experience`
 -- AUTO_INCREMENT for table `research_outcome`
 --
 ALTER TABLE `research_outcome`
-  MODIFY `id_research_outcome` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_research_outcome` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `skills`
 --
 ALTER TABLE `skills`
-  MODIFY `id_skills` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_skills` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `training_seminar_workshop`
