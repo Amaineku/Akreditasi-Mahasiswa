@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 24, 2019 at 03:58 PM
+-- Generation Time: Dec 25, 2019 at 04:57 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.10
 
@@ -201,6 +201,14 @@ CREATE TABLE `training_seminar_workshop` (
   `id_user` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `training_seminar_workshop`
+--
+
+INSERT INTO `training_seminar_workshop` (`id_training_seminar_workshop`, `nama_kegiatan`, `posisi`, `tahun`, `lokasi`, `upload_file`, `kategori`, `id_user`) VALUES
+(1, 'a', 'a', 'a', 'a', 0x6d68732e73716c, 'a', 1),
+(3, 'Training Cloud Computing', 'Peserta', '2019', 'Bandung ITB', 0x6d68732e73716c, 'Seminar', 2);
+
 -- --------------------------------------------------------
 
 --
@@ -397,7 +405,7 @@ ALTER TABLE `skills`
 -- AUTO_INCREMENT for table `training_seminar_workshop`
 --
 ALTER TABLE `training_seminar_workshop`
-  MODIFY `id_training_seminar_workshop` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_training_seminar_workshop` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `user`

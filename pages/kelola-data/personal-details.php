@@ -14,8 +14,7 @@ include '../../config/kelola-data/personal_details.php';
             <div class="box-body">
               <table class="table table-bordered table-striped">
                 <thead>
-                  <tr>        
-                    <th>No</th>   
+                  <tr> 
                     <th>NIM</th>
                     <th>Nama</th>
                     <th>Alamat</th>
@@ -31,7 +30,6 @@ include '../../config/kelola-data/personal_details.php';
                             foreach($db->search_by_field('id_user' , $_SESSION['user']) as $show) {
                     ?>
                       <tr>
-                        <td width="4%"><?php echo $no++; ?></td>
                         <td><?php echo $show['nim']; ?></td>
                         <td><?php echo $show['nama']; ?></td>
                         <td><?php echo $show['alamat']; ?></td>

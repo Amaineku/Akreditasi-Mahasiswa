@@ -33,6 +33,7 @@
 </head>
 <body class="skin-blue">
 	<div class="wrapper">
+
 		<?php 
 			if(isset($_SESSION['user'])) {
 		?>
@@ -71,6 +72,7 @@
 			    </div>
 			  </nav>
 		</header>
+
 		<?php 
 		  } else {
 		?>
@@ -94,6 +96,7 @@
 		<?php
 			}
 		?>
+		
 
 		<aside class="main-sidebar">
 		  <section class="sidebar">
