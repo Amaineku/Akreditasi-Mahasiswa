@@ -19,7 +19,7 @@
       </div>
       <?php } ?>
       <div class="login-box-body">
-        <p class="login-box-msg">Sign in to start your session</p>
+        <p class="login-box-msg">Login</p>
         <form action="action.php?table=user&&action=login" method="post">
           <div class="form-group has-feedback">
             <input type="text" class="form-control" placeholder="Email" name="email" autocomplete="off">
@@ -35,10 +35,6 @@
             </div>
           </div>
         </form>
-        <div class="social-auth-links text-center">
-          <p>- OR -</p>
-          <a href="#">I forgot my password</a>
-        </div>
       </div>
     </div>
     <?php include '../static/template-bot.php'; ?>

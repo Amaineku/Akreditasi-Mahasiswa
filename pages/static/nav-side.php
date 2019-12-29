@@ -29,6 +29,11 @@
             <i class="fa fa-dashboard"></i> Dashboard
           </a>
         </li>
+        <li class="active">
+            <a href="../../connector.php?page=kelola-personal-details">
+              <i class="fa fa-user"></i> Personal Details
+            </a>
+        </li>
         <?php
           if($_SESSION['page']=='kelola') {
             echo "<li class='treeview active'>";
