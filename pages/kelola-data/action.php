@@ -95,7 +95,7 @@
 	 		$do->store($_POST['nim'], $_POST['nama'], $_POST['tempat_lahir'], $_POST['tanggal_lahir'], $_POST['no_hp'], $_POST['email'], $_POST['alamat'], $_POST['status_pernikahan'], $_POST['prodi'], $_POST['angkatan'],$_POST['sosmed'], $_POST['id_user']);
 	 		header("location:personal-details.php");
 	 	} elseif ($action == "update") {
-	 		$do->update($_POST['id_personal_details'], $_POST['nim'], $_POST['nama'], $_POST['tempat_lahir'], $_POST['tempat_lahir'], $_POST['no_hp'], $_POST['email'], $_POST['alamat'], $_POST['status_pernikahan'], $_POST['prodi'], $_POST['angkatan'], $_POST['sosmed']);
+	 		$do->update($_POST['id_personal_details'], $_POST['nim'], $_POST['nama'], $_POST['tempat_lahir'], $_POST['tanggal_lahir'], $_POST['no_hp'], $_POST['email'], $_POST['alamat'], $_POST['status_pernikahan'], $_POST['prodi'], $_POST['angkatan'], $_POST['sosmed']);
 	 		header("location:personal-details.php");
 	 	} elseif ($action == "delete") {
 	 		$do->delete($_POST['id_personal_details']);

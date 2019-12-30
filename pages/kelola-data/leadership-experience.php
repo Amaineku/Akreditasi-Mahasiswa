@@ -75,9 +75,21 @@ include '../../config/kelola-data/leadership_experience.php';
               </div>
 
               <div class="form-group">
-                <label>Tahun</label>
-                <input type="text" class="form-control" name="tahun" placeholder="Masukan Tahun" required>
-              </div>
+                          <label>Tahun</label>
+                          <select name="tahun" class="form-control" required>
+                          <option>Tahun</option>
+                              <option>2010</option>
+                              <option>2011</option>
+                              <option>2012</option>
+                              <option>2013</option>
+                              <option>2014</option>
+                              <option>2015</option>
+                              <option>2016</option>
+                              <option>2017</option>
+                              <option>2018</option>
+                              <option>2019</option>
+                      </select>
+                  </div>
 
               <div class="form-group">
                 <label>Deskripsi</label>
@@ -122,10 +134,22 @@ include '../../config/kelola-data/leadership_experience.php';
                 <input type="text" class="form-control" name="posisi" placeholder="" value="<?php echo $show['posisi'] ?>">
               </div>
 
-              <div class="form-group">
-                <label>Tahun</label>
-                <input type="text" class="form-control" name="tahun" placeholder="" value="<?php echo $show['tahun'] ?>" >
-              </div>
+                <div class="form-group">
+                  <label>Tahun</label>
+                  <select name="tahun" class="form-control">
+                  <option><?php echo $show['tahun'] ?></option>
+                  <option>2010</option>
+                  <option>2011</option>
+                  <option>2012</option>
+                  <option>2013</option>
+                  <option>2014</option>
+                  <option>2015</option>
+                  <option>2016</option>
+                  <option>2017</option>
+                  <option>2018</option>
+                  <option>2019</option>
+                        </select>
+                    </div>
               
               <div class="form-group">
                 <label>Deskripsi</label>

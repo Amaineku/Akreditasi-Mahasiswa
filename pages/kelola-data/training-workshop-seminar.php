@@ -20,7 +20,7 @@ include '../../config/kelola-data/training_seminar_workshop.php';
                     <th>Posisi</th>
                     <th>Tahun</th>
                     <th>Lokasi</th>
-					           <th>Upload File</th>
+					<th>Upload File</th>
                     <th>Kategori</th>
                     <th>Actions</th>
                   </tr>
@@ -84,12 +84,24 @@ include '../../config/kelola-data/training_seminar_workshop.php';
               </div>
 			  </div>
 			  
-              <div class="col-sm-6"> 
-              <div class="form-group">
-                <label>Tahun</label>
-                <input type="text" class="form-control" name="tahun" placeholder="Masukan Tahun" required>
-              </div>
-             </div>
+   		<div class="col-lg-6">
+             <div class="form-group">
+                    <label>Tahun</label>
+                    <select name="tahun" class="form-control" required>
+                    <option>Tahun</option>
+              					<option>2010</option>
+              					<option>2011</option>
+              					<option>2012</option>
+              					<option>2013</option>
+              					<option>2014</option>
+              					<option>2015</option>
+              					<option>2016</option>
+              					<option>2017</option>
+              					<option>2018</option>
+              					<option>2019</option>
+                </select>
+            </div>
+        </div>
 
               <div class="col-sm-6"> 
               <div class="form-group">
@@ -98,8 +110,6 @@ include '../../config/kelola-data/training_seminar_workshop.php';
               </div>
              </div>
 
-             
-			  
 			     <div class="col-lg-12">
                <div class="form-group">
                   <div class="custom-file">
@@ -109,15 +119,19 @@ include '../../config/kelola-data/training_seminar_workshop.php';
                </div>
             </div>
 		
-          <div class="col-sm-12">
-              <div class="form-group">
-                <label>Kategori</label>
-                <input type="text" class="form-control" name="kategori" placeholder="Kategori" required>
-              </div>
+        <div class="col-lg-12">
+             <div class="form-group">
+                    <label>Kategori</label>
+                    <select name="kategori" class="form-control">
+                    <option>Kategori</option>
+					<option>Training</option>
+					<option>Seminar</option>
+					<option>Workshop</option>
+                </select>
             </div>
+        </div>     
 		
              
-				
           </div>
 		  
           <div class="modal-footer">
@@ -161,12 +175,24 @@ include '../../config/kelola-data/training_seminar_workshop.php';
               </div>
             </div>
 
-             <div class="col-sm-6"> 
-              <div class="form-group">
-                <label>Tahun</label>
-                <input type="text" class="form-control" name="tahun" placeholder="" value="<?php echo $show['tahun'] ?>">
-              </div>
-             </div>
+   		<div class="col-lg-6">
+        <div class="form-group">
+          <label>Tahun</label>
+          <select name="tahun" class="form-control">
+					<option><?php echo $show['tahun'] ?></option>
+					<option>2010</option>
+					<option>2011</option>
+					<option>2012</option>
+					<option>2013</option>
+					<option>2014</option>
+					<option>2015</option>
+					<option>2016</option>
+					<option>2017</option>
+					<option>2018</option>
+					<option>2019</option>
+                </select>
+            </div>
+        </div>
 
               <div class="col-sm-6"> 
               <div class="form-group">
@@ -184,13 +210,17 @@ include '../../config/kelola-data/training_seminar_workshop.php';
                </div>
             </div>   
 			
-			 <div class="col-sm-12"> 
-              <div class="form-group">
-                <label>Kategori</label>
-                <input type="text" class="form-control" name="kategori" placeholder="" value="<?php echo $show['kategori'] ?>">
-              </div>
-             </div>
-
+		<div class="col-lg-12">
+             <div class="form-group">
+                    <label>Kategori</label>
+                    <select name="kategori" class="form-control">
+                    <option><?php echo $show['kategori'] ?></option>
+					<option>Training</option>
+					<option>Seminar</option>
+					<option>Workshop</option>
+                </select>
+            </div>
+        </div> 
               
 			 
 		  </div>

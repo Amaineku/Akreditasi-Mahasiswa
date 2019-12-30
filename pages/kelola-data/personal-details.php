@@ -8,6 +8,7 @@ include '../../config/kelola-data/personal_details.php';
           <div class="box">
             <div class="box-header">
               <h3 class="box-title">Personal Details</h3>
+                <link rel="stylesheet" href="css/bootstrap.css">
               <div class="pull-right box-tools">
                
             </div><!-- /.box-header -->
@@ -97,17 +98,82 @@ include '../../config/kelola-data/personal_details.php';
               </div>
              </div>
 
-              <div class="col-sm-6"> 
-              <div class="form-group">
-                <label>Tanggal Lahir</label>
-                <input type="text" class="form-control" name="tanggal_lahir" value="<?php echo $show['tanggal_lahir'] ?>">
-              </div>
-             </div>
+                                      <div class="col-sm-6">
+                                                <label for="tanggalLahir">Tanggal Lahir</label>
+                                                <div class="row ">
+                                                    <div class="col-sm-4">
+                                                        <div class="input-group mb-2">
+                                                            <div class="input-group-prepend">
+                                                                <div class="input-group-text">D</div>
+                                                            </div>
+                                                            <select name="tanggal" class="form-control custom-select">
+                                                                <?php
+                                                                $tanggal = 01;
+                                                                $d_now = date('d', strtotime($dataProfile['tanggal_lahir']));
+                                                                while ($tanggal < 32) {
+                                                                    if ($d_now == $tanggal) {
+                                                                        ?>
+                                                                        <option selected value="<?php echo $tanggal; ?>"><?php echo $tanggal++; ?></option>
+                                                                    <?php } else { ?>
+                                                                        <option value="<?php echo $tanggal; ?>"><?php echo $tanggal++; ?></option>
+                                                                    <?php
+                                                                    }
+                                                                }
+                                                                ?>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <div class="input-group mb-2">
+                                                            <div class="input-group-prepend">
+                                                                <div class="input-group-text">M</div>
+                                                            </div>
+                                                            <select name="bulan" class="form-control custom-select">
+                                                                <?php
+                                                                $bulan = 01;
+                                                                $m_now = date('m', strtotime($dataProfile['tanggal_lahir']));
+                                                                while ($bulan < 13) {
+                                                                    if ($m_now == $bulan) {
+                                                                        ?>
+                                                                        <option selected value="<?php echo $bulan; ?>"><?php echo $bulan++; ?></option>
+                                                                    <?php } else { ?>
+                                                                        <option value="<?php echo $bulan; ?>"><?php echo $bulan++; ?></option>
+                                                                    <?php
+                                                                    }
+                                                                }
+                                                                ?>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <div class="input-group mb-2">
+                                                            <div class="input-group-prepend">
+                                                                <div class="input-group-text">Y</div>
+                                                            </div>
+                                                            <select name="tahun" class="form-control custom-select">
+                                                                <?php
+                                                                $tahun = 1990;
+                                                                $y_now = date('Y', strtotime($dataProfile['tanggal_lahir']));
+                                                                while ($tahun < 2011) {
+                                                                    if ($y_now == $tahun) {
+                                                                        ?>
+                                                                        <option selected value="<?php echo $tahun; ?>"><?php echo $tahun++; ?></option>
+                                                                    <?php } else { ?>
+                                                                        <option value="<?php echo $tahun; ?>"><?php echo $tahun++; ?></option>
+                                                                    <?php
+                                                                    }
+                                                                }
+                                                                ?>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
 
             <div class="col-sm-6">
               <div class="form-group">
                 <label>Kontak</label>
-                <input type="text" class="form-control" name="no_hp" value="<?php echo $show['no_hp'] ?>">
+                <input type="number" class="form-control" name="no_hp" value="<?php echo $show['no_hp'] ?>">
               </div>
             </div>
 
@@ -125,26 +191,47 @@ include '../../config/kelola-data/personal_details.php';
               </div>
             </div>
 
-            <div class="col-sm-6">
+           <div class="col-sm-6">
               <div class="form-group">
                 <label>Status Pernikahan</label>
-                <input type="text" class="form-control" name="status_pernikahan" value="<?php echo $show['status_pernikahan'] ?>">
+                <table border="0">
+                <tr>
+                    <td><input type="radio" name="status_pernikahan" value="Belum Menikah" checked />Belum Menikah</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="status_pernikahan" value="Sudah Menikah"/>Sudah Menikah</td>
+                </tr>
+                </table>
               </div>
             </div>
 
-            <div class="col-sm-6">
-              <div class="form-group">
-                <label>Prodi</label>
-                <input type="text" class="form-control" name="prodi" value="<?php echo $show['prodi'] ?>">
-              </div>
+               <div class="col-lg-6">
+                  <div class="form-group">
+                      <label>Prodi</label>
+                          <select name="prodi" class="form-control">
+                          <option><?php echo $show['prodi'] ?></option>
+                          <option>Manajemen Bisnis</option>
+                          <option>Ilmu Komputer</option>
+                          <option>Sistem Informasi</option>
+                    </select>
+                </div>
             </div>
 
-            <div class="col-sm-6">
-              <div class="form-group">
-                <label>Angkatan</label>
-                <input type="text" class="form-control" name="angkatan" value="<?php echo $show['angkatan'] ?>">
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label>Angkatan</label>
+                  <select name="angkatan" class="form-control">
+                  <option><?php echo $show['angkatan'] ?></option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                 </select>
+                </div>
               </div>
-            </div>
 
             <div class="col-sm-12">
               <div class="form-group">

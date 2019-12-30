@@ -72,20 +72,29 @@ include '../../config/kelola-data/personal_sertification.php';
                 <input type="text" class="form-control" name="nama_lembaga" placeholder="Masukan Nama Lembaga" required>
               </div>
               
-              <div class="form-group">
-                <label>Tahun</label>
-                <input type="text" class="form-control" name="tahun" placeholder="Masukan Tahun" required>
-              </div>
+            <div class="form-group">
+                    <label>Tahun</label>
+                    <select name="tahun" class="form-control" required>
+                    <option>Tahun</option>
+                        <option>2010</option>
+                        <option>2011</option>
+                        <option>2012</option>
+                        <option>2013</option>
+                        <option>2014</option>
+                        <option>2015</option>
+                        <option>2016</option>
+                        <option>2017</option>
+                        <option>2018</option>
+                        <option>2019</option>
+                </select>
+            </div>
 
-                <div class="col-lg-12">
                <div class="form-group">
                   <div class="custom-file">
                       <label class="custom-file-label" for="customFile">File</label>
                        <input type="file" class="custom-file-input" id="customFile" name="upload_file" required>
                    </div>
                </div>
-            </div> 
-
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Tutup</button>
@@ -124,19 +133,29 @@ include '../../config/kelola-data/personal_sertification.php';
                 <input type="text" class="form-control" name="nama_lembaga" placeholder="" value="<?php echo $show['nama_lembaga'] ?>" >
               </div>
 
-              <div class="form-group">
-                <label>Tahun</label>
-                <input type="text" class="form-control" name="tahun" placeholder="" value="<?php echo $show['tahun'] ?>">
-              </div>
+             <div class="form-group">
+                 <label>Tahun</label>
+                    <select name="tahun" class="form-control">
+                        <option><?php echo $show['tahun'] ?></option>
+                        <option>2010</option>
+                        <option>2011</option>
+                        <option>2012</option>
+                        <option>2013</option>
+                        <option>2014</option>
+                        <option>2015</option>
+                        <option>2016</option>
+                        <option>2017</option>
+                        <option>2018</option>
+                        <option>2019</option>
+                    </select>
+            </div>
 
-              <div class="col-lg-12">
                <div class="form-group">
                   <div class="custom-file">
                       <label class="custom-file-label" for="customFile">File</label>
                        <input type="file" class="custom-file-input" id="customFile" name="upload_file" value="<?php echo $show['upload_file'] ?>" >
                    </div>
                </div>
-            </div>   
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Tutup</button>

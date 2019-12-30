@@ -82,19 +82,43 @@ include '../../config/kelola-data/working_experience.php';
               </div>
 			  </div>
 			  
-              <div class="col-sm-6"> 
-              <div class="form-group">
-                <label>Tahun Masuk</label>
-                <input type="text" class="form-control" name="tahun_masuk" placeholder="Masukan Tahun Masuk" required>
-              </div>
-             </div>
+      <div class="col-lg-6">
+             <div class="form-group">
+                    <label>Tahun Masuk</label>
+                    <select name="tahun_masuk" class="form-control">
+                    <option>Tahun Masuk</option>
+                        <option>2010</option>
+                        <option>2011</option>
+                        <option>2012</option>
+                        <option>2013</option>
+                        <option>2014</option>
+                        <option>2015</option>
+                        <option>2016</option>
+                        <option>2017</option>
+                        <option>2018</option>
+                        <option>2019</option>
+                </select>
+            </div>
+        </div>
 
-              <div class="col-sm-6"> 
-              <div class="form-group">
-                <label>Tahun Berakhir</label>
-                <input type="text" class="form-control" name="tahun_berakhir" placeholder="Masukan Tahun Berakhir" required>
-              </div>
-             </div>
+      <div class="col-lg-6">
+             <div class="form-group">
+                    <label>Tahun Berakhir</label>
+                    <select name="tahun_berakhir" class="form-control">
+                    <option>Tahun Berakhir</option>
+                        <option>2010</option>
+                        <option>2011</option>
+                        <option>2012</option>
+                        <option>2013</option>
+                        <option>2014</option>
+                        <option>2015</option>
+                        <option>2016</option>
+                        <option>2017</option>
+                        <option>2018</option>
+                        <option>2019</option>
+                </select>
+            </div>
+        </div>
 
              <div class="col-sm-6">
               <div class="form-group">
@@ -159,19 +183,43 @@ include '../../config/kelola-data/working_experience.php';
               </div>
             </div>
 
-             <div class="col-sm-6"> 
-              <div class="form-group">
-                <label>Tahun Masuk</label>
-                <input type="text" class="form-control" name="tahun_masuk" placeholder="" value="<?php echo $show['tahun_masuk'] ?>">
-              </div>
-             </div>
+        <div class="col-lg-6">
+             <div class="form-group">
+                    <label>Tahun Masuk</label>
+                    <select name="tahun_masuk" class="form-control">
+          <option><?php echo $show['tahun_masuk'] ?></option>
+          <option>2010</option>
+          <option>2011</option>
+          <option>2012</option>
+          <option>2013</option>
+          <option>2014</option>
+          <option>2015</option>
+          <option>2016</option>
+          <option>2017</option>
+          <option>2018</option>
+          <option>2019</option>
+                </select>
+            </div>
+        </div>
 
-              <div class="col-sm-6"> 
-              <div class="form-group">
-                <label>Tahun Berakhir</label>
-                <input type="text" class="form-control" name="tahun_berakhir" placeholder="" value="<?php echo $show['tahun_berakhir'] ?>">
-              </div>
-             </div>
+        <div class="col-lg-6">
+             <div class="form-group">
+                    <label>Tahun Berakhir</label>
+                    <select name="tahun_berakhir" class="form-control">
+          <option><?php echo $show['tahun_berakhir'] ?></option>
+          <option>2010</option>
+          <option>2011</option>
+          <option>2012</option>
+          <option>2013</option>
+          <option>2014</option>
+          <option>2015</option>
+          <option>2016</option>
+          <option>2017</option>
+          <option>2018</option>
+          <option>2019</option>
+                </select>
+            </div>
+        </div>
 
              <div class="col-sm-6"> 
               <div class="form-group">
