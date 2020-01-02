@@ -78,7 +78,7 @@
                 
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Tutup</button>
+                <button type="button" class="btn btn-primary pull-left" data-dismiss="modal">Tutup</button>
                 <button type="submit" class="btn btn-primary">Simpan</button>
               </div>
           </form>    
@@ -116,7 +116,7 @@
 
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Tutup</button>
+            <button type="button" class="btn btn-warning pull-left" data-dismiss="modal">Tutup</button>
             <button type="submit," class="btn btn-warning">Simpan</button>
           </div>
         </form>

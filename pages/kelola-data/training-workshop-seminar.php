@@ -20,7 +20,7 @@ include '../../config/kelola-data/training_seminar_workshop.php';
                     <th>Posisi</th>
                     <th>Tahun</th>
                     <th>Lokasi</th>
-					<th>Upload File</th>
+					          <th>Upload File</th>
                     <th>Kategori</th>
                     <th>Actions</th>
                   </tr>
@@ -110,32 +110,31 @@ include '../../config/kelola-data/training_seminar_workshop.php';
               </div>
              </div>
 
-			     <div class="col-lg-12">
-               <div class="form-group">
-                  <div class="custom-file">
-                      <label class="custom-file-label" for="customFile">File</label>
-                       <input type="file" class="custom-file-input" id="customFile" name="upload_file" required>
-                   </div>
-               </div>
-            </div>
+
 		
-        <div class="col-lg-12">
+        <div class="col-lg-6">
              <div class="form-group">
                     <label>Kategori</label>
                     <select name="kategori" class="form-control">
                     <option>Kategori</option>
-					<option>Training</option>
-					<option>Seminar</option>
-					<option>Workshop</option>
+          					<option>Training</option>
+          					<option>Seminar</option>
+          					<option>Workshop</option>
                 </select>
             </div>
         </div>     
 		
-             
+            <div class="col-lg-14">
+                 <div class="form-group">
+                   <label>File</label>
+                   <input type="file" name="upload_file" class="custom-file-input" id="customFile" autocomplete="off">
+                 </div>
+            </div>   
+
           </div>
 		  
           <div class="modal-footer">
-            <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Tutup</button>
+            <button type="button" class="btn btn-primary pull-left" data-dismiss="modal">Tutup</button>
             <button type="submit" class="btn btn-primary">Simpan</button>
           </div>
 
@@ -201,31 +200,30 @@ include '../../config/kelola-data/training_seminar_workshop.php';
               </div>
              </div>
 			  
-			  <div class="col-lg-12">
-               <div class="form-group">
-                  <div class="custom-file">
-                      <label class="custom-file-label" for="customFile">File</label>
-                       <input type="file" class="custom-file-input" id="customFile" name="upload_file" value="<?php echo $show['upload_file'] ?>" >
-                   </div>
-               </div>
-            </div>   
-			
-		<div class="col-lg-12">
-             <div class="form-group">
-                    <label>Kategori</label>
-                    <select name="kategori" class="form-control">
-                    <option><?php echo $show['kategori'] ?></option>
-					<option>Training</option>
-					<option>Seminar</option>
-					<option>Workshop</option>
-                </select>
-            </div>
-        </div> 
-              
+ 
+    			
+    	     	<div class="col-lg-6">
+                 <div class="form-group">
+                        <label>Kategori</label>
+                        <select name="kategori" class="form-control">
+                        <option><?php echo $show['kategori'] ?></option>
+              					<option>Training</option>
+              					<option>Seminar</option>
+              					<option>Workshop</option>
+                    </select>
+                </div>
+            </div> 
+
+            <div class="col-lg-14">
+                 <div class="form-group">
+                   <label>File</label>
+                   <input type="file" name="upload_file" class="custom-file-input" id="customFile" value="<?php echo $show['upload_file'] ?>">
+                 </div>
+            </div>              
 			 
 		  </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Tutup</button>
+            <button type="button" class="btn btn-warning pull-left" data-dismiss="modal">Tutup</button>
             <button type="submit" class="btn btn-warning">Simpan</button>
           </div>
 		</form>

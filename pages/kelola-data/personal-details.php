@@ -99,7 +99,7 @@ include '../../config/kelola-data/personal_details.php';
              </div>
 
                                       <div class="col-sm-6">
-                                                <label for="tanggalLahir">Tanggal Lahir</label>
+                                                <label> Tanggal Lahir</label>
                                                 <div class="row ">
                                                     <div class="col-sm-4">
                                                         <div class="input-group mb-2">
@@ -243,7 +243,7 @@ include '../../config/kelola-data/personal_details.php';
               
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Tutup</button>
+            <button type="button" class="btn btn-warning pull-left" data-dismiss="modal">Tutup</button>
             <button type="submit" class="btn btn-warning">Simpan</button>
           </div>
         </form>

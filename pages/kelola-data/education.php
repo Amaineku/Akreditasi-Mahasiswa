@@ -62,18 +62,18 @@
           <form action="action.php?table=education&action=store" method="post">
 
              <input type="hidden" name="id_user" value="<?php echo $_SESSION['user']; ?>">
-              <div class="modal-body row">
-                <div class="col-sm-6">
+              <div class="modal-body">
+
                  <div class="form-group">
                     <label>Nama</label>
                     <input type="text" class="form-control" name="nama_education" placeholder="Masukan Nama" required>
                   </div>
-                 </div> 
-                 <div class="col-sm-6"> 
-                                <div class="form-group">
-                          <label>Tahun</label>
-                          <select name="tahun" class="form-control" required>
-                          <option>Tahun</option>
+                  
+
+                  <div class="form-group">
+                   <label>Tahun</label>
+                     <select name="tahun" class="form-control" required>
+                             yy <option>Tahun</option>
                               <option>2010</option>
                               <option>2011</option>
                               <option>2012</option>
@@ -86,16 +86,17 @@
                               <option>2019</option>
                       </select>
                   </div>
-                </div>
-                <div class="col-sm-12">
-                  <div class="form-group">
-                    <label>Kota</label>
-                    <input type="text" class="form-control" name="kota" placeholder="Masukan Kota" required>
-                  </div>
-                 </div> 
+                
+
+               <div class="form-group">
+                   <label>Kota</label>
+                   <input type="text" class="form-control" name="kota" placeholder="Masukan Kota" required>
+               </div>
+                 
+
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Tutup</button>
+                <button type="button" class="btn btn-primary pull-left" data-dismiss="modal">Tutup</button>
                 <button type="submit" class="btn btn-primary">Simpan</button>
               </div>
           </form>    
@@ -119,6 +120,7 @@
           <form action="action.php?table=education&action=update" method="post">
           <div class="modal-body">
              <input type="hidden" name="id_education" value="<?php echo $show['id_education'] ?>">
+
              <div class="form-group">
                 <label>Nama</label>
                 <input type="text" class="form-control" name="nama_education" placeholder="" value="<?php echo $show['nama_education'] ?>" >
@@ -148,7 +150,7 @@
 
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Tutup</button>
+            <button type="button" class="btn btn-warning pull-left" data-dismiss="modal">Tutup</button>
             <button type="submit," class="btn btn-warning">Simpan</button>
           </div>
         </form>

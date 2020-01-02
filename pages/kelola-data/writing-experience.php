@@ -130,18 +130,16 @@ include '../../config/kelola-data/writing_experience.php';
             </div>
 
             <div class="col-lg-12">
-               <div class="form-group">
-                  <div class="custom-file">
-                      <label class="custom-file-label" for="customFile">File</label>
-                       <input type="file" class="custom-file-input" id="customFile" name="upload_file" required>
-                   </div>
-               </div>
-            </div>   
+                 <div class="form-group">
+                   <label>File</label>
+                   <input type="file" name="upload_file" class="custom-file-input" id="customFile" autocomplete="off">
+                 </div>
+            </div> 
               
           </div>
 
           <div class="modal-footer">
-            <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Tutup</button>
+            <button type="button" class="btn btn-primary pull-left" data-dismiss="modal">Tutup</button>
             <button type="submit" class="btn btn-primary">Simpan</button>
           </div>
 
@@ -235,20 +233,18 @@ include '../../config/kelola-data/writing_experience.php';
                 <label>Kategori</label>
                 <input type="text" class="form-control" name="kategori" placeholder="" value="<?php echo $show['kategori'] ?>">
               </div>
-            </div>
+            </div> 
 
-            <div class="col-lg-12">
-               <div class="form-group">
-                  <div class="custom-file">
-                      <label class="custom-file-label" for="customFile">File</label>
-                       <input type="file" class="custom-file-input" id="customFile" name="upload_file" value="<?php echo $show['upload_file'] ?>" >
-                   </div>
-               </div>
-            </div>   
+             <div class="col-lg-12">
+                 <div class="form-group">
+                   <label>File</label>
+                   <input type="file" name="upload_file" class="custom-file-input" id="customFile" value="<?php echo $show['upload_file'] ?>">
+                 </div>
+            </div>  
               
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Tutup</button>
+            <button type="button" class="btn btn-warning pull-left" data-dismiss="modal">Tutup</button>
             <button type="submit" class="btn btn-warning">Simpan</button>
           </div>
         </form>
